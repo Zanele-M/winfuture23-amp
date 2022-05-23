@@ -1,0 +1,136 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+    <title>Prices-Widgets</title>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="canonical" href="file:///C:/Users/27817/Documents/AMP/WinFuture.html">
+    <meta name="viewport" content="width=device-width">
+        <!-- ## Setup -->
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <style amp-custom>
+      * {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+      }
+      div {
+        background-color: #e8f2fc;
+        border-radius: 5px;
+        width: 520px;
+        margin-left: 50px;
+        padding: 2px;
+      }
+      .i-amphtml-accordion-header {
+        appearance: inherit;
+        margin-bottom: 3px;
+        background-color: #e8f2fc;
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 15px;
+      }
+      .i-amphtml-accordion-header:hover {
+        border-radius: 7px;
+        border: 2px solid white;
+        box-shadow: 2px;
+        background-color: #00438e;
+        color: white;
+        text-shadow: 2px 1px black;
+        box-shadow: 0px 0px 10px grey;
+        position: absolute;
+        z-index: 1;
+      }
+      h4 {
+        color: #00438e;
+        font-weight: bold;
+        font-size: large;
+        letter-spacing: 1px;
+        }
+      h4::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        left: 100%;
+        display: inline-block;
+        border-top: 4px solid #e8f2fc;
+        border-left: 9px solid #00438e;
+        border-bottom: 4px solid #e8f2fc;
+      }
+      h4:hover::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        left: 100%;
+        display: inline-block;
+        border-top: 9px solid white;
+        border-left: 4px solid #00438e;
+        border-right: 4px solid #00438e;
+        border-bottom: 4px solid #00438e;
+        margin-top: 5px;
+        position: relative;
+      }
+      </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+<body>
+  <h2>
+    Select which climate you prefer
+  </h2>
+  <div id="accordion">
+    <amp-state id="climateCountries">
+    </amp-state>
+    <amp-accordion>
+      <section>
+        <h4>
+          Switch OLED
+        </h4>
+          <amp-list layout="fixed-height" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" height="0" binding="refresh">
+            <template type="amp-mustache">
+              <ul>
+                <span>Abel</span>
+              </ul>
+            </template>
+          </amp-list>
+      </section>
+      <section>
+        <h4>
+          Switch
+        </h4>
+          <amp-list layout="fixed-height" height="0" binding="refresh" [is-layout-container]="true">
+            <template type="amp-mustache">
+              <ul>
+                <span>Crown</span>
+              </ul>
+            </template>
+          </amp-list>
+      </section>
+      <section>
+        <h4>
+          Switch Lite
+        </h4>
+          <amp-list layout="fixed-height" height="0" binding="refresh" [is-layout-container]="true">
+            <template type="amp-mustache">
+              <ul>
+                <span>{{Name}}</span>
+              </ul>
+            </template>
+          </amp-list>
+      </section>
+      <section>
+        <h4>
+          Pro Controller
+        </h4>
+          <amp-list layout="fixed-height" height="0" binding="refresh" [is-layout-container]="true">
+            <template type="amp-mustache">
+              <ul>
+                <span>{{Name}}</span>
+              </ul>
+            </template>
+          </amp-list>
+      </section>
+    </amp-accordion>
+    <p>The accordion below lists countries, organized by continent, that match the climate you chose. </p>
+  </div>
+</body>
+</html>
