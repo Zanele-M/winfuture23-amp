@@ -88,7 +88,14 @@
             <h4>
               North America
             </h4>
-              <amp-list layout="fixed-height" height="0" binding="refresh" [src]="climateCountries.countries.filter(country => country.continent == 'North America')" [is-layout-container]="true">
+            <amp-state id="localState">
+              <script type="application/json">
+                {
+                  "items": [{"id": 1}, {"id": 2}, {"id": 2}]
+                }
+              </script>
+            </amp-state>
+              <amp-list layout="fixed-height" height="0" binding="refresh" [src]="amp-state:localState" [is-layout-container]="true">
                 <template type="amp-mustache">
                   <ul>
                     <span>{{Name}}</span>
