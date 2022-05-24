@@ -186,7 +186,7 @@
           }
         </script>
       </amp-state>
-      <amp-list src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" layout="fixed-height" height="0">
+      <amp-list credentials="include" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" layout="fixed-height" height="0">
         <template type="amp-mustache">
           <li>{{productName}}</li>
         </template>
