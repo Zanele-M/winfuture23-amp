@@ -4,7 +4,7 @@
     <title>Prices-Widgets</title>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <link rel="canonical" href="file:///C:/Users/27817/Documents/AMP/WinFuture.html">
+    <link rel="canonical" href="https://zanele-m.github.io/winfuture23-amp/WinFuture.html">
     <meta name="viewport" content="width=device-width">
         <!-- ## Setup -->
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
@@ -127,7 +127,7 @@
     Select which climate you prefer
   </h2>
   <div id="accordion">
-    <amp-state id="climateCountries">
+    <!-- <amp-state id="climateCountries">
     </amp-state>
     <amp-accordion>
       <section>
@@ -177,10 +177,23 @@
               </ul>
             </template>
           </amp-list>
-      </section>
-    </amp-accordion>
-  </div>
+      </section> -->
+    <!-- </amp-accordion> -->
 
+
+      <amp-state id="localState">
+        <script type="application/json">
+          {
+            "items": [{"id": 1}, {"id": 2}, {"id": 2}]
+          }
+        </script>
+      </amp-state>
+      <amp-list src="amp-state:localState">
+        <template type="amp-mustache">
+          <li>{{id}}</li>
+        </template>
+      </amp-list>
+  </div>
   <div class="stores">
     <ul>
         <li><span><img src="assets/amazon.png" alt="amazon icon"><p class="store-name">Usbekdeals</p><p class="amount">62,99€</p></span></li>
