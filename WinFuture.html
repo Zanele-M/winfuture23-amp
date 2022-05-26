@@ -18,10 +18,19 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   </head>
     <body>
-     <amp-list layout="fixed-height" height="100" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" binding="no">
+      <amp-state id="products" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json">
+      </amp-state>
+      <amp-accordion>
+        <section>
+     <amp-list layout="fixed-height" height="100" [src]="products" binding="no">
     <template type="amp-mustache">
-      <div>{{productName}}</div>
-    </template>
+      <ul>
+        <span>{{productName}}</span>
+      </ul>   
+     </template>
   </amp-list>
+</section>
+</amp-accordion>
+
   </body>
   
