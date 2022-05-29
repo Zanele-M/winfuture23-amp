@@ -1,98 +1,96 @@
 {
-    "items": {
-        "products": [
-            {
-                "productName": "Galaxy Watch 4",
-                "productStore": [
-                    {
-                        "websiteName": "GSMshop.at",
-                        "website": "https://www.GSmShop.de",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.gsmshop.at/",
-                        "price": 160.90
-                    },
-                    {
-                        "websiteName": "Gomibo.de",
-                        "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dgomibo-de%26loc%3Dhttps%253A%252F%252Fwww.gomibo.de%252Fzubehoer-detail%252Fsamsung-galaxy-watch-4-44mm-schwarz%253Futm_source%253D4095%26ghaID%3D2576543%26cs_id%3D137787954%26key%3D713def46c29bd12b01d722f42d7c3b3e&id=2576543&h=34ec04c797",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.gomibo.de/",
-                        "price": 166.95
-                    },
-                    {
-                        "websiteName": "Bei Amazon bestellen",
-                        "website": "/special/amazon/angebote/redirect?asin=B098BJYYFV",
-                        "icon": "",
-                        "price": 186.56
-                    }
-                ]
-            },
-            {
-                "productName": "Huawei Watch GT 3 Active",
-                "productStore": [
-                    {
-                        "websiteName": "Mindfactory",
-                        "website": "https://winfuture-mobi.digidip.net/visit?url=https%3A%2F%2Fwinfuture.de%2Fpreisvergleich%2Fwfredirect%3Floc%3Dhttps%253A%252F%252Fgeizhals.at%252Fredir.cgi%253Fh%253Dmindfactory%2526loc%253Dhttps%25253A%25252F%25252Fwww.mindfactory.de%25252Fproduct_info.php%25252Finfo%25252Fp1434422%25252Fpid%25252Fgeizhals%2526ghaID%253D2625340%2526cs_id%253D137787954%2526key%253D72a65ee3c7c9862ef63196bd7767410d%26id%3D2625340%26h%3Dd94546ef41&currurl=https%3A%2F%2Fm.winfuture.de%2Fnews%2F129542",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.mindfactory.de/",
-                        "price": 188.97
-                    },
-                    {
-                        "websiteName": "Galaxus",
-                        "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dgalaxus-de%26loc%3Dhttps%253A%252F%252Fwww.galaxus.de%252Fde%252Fproduct%252F18388945%253FpcscpId%253D29%2526utm_content%253D1-2w%2526utm_campaign%253Dpreisvergleich%2526utm_source%253Dgeizhals%2526utm_medium%253Dcpc%26ghaID%3D2625340%26cs_id%3D137787954%26key%3Ddc3d5a923a3b7028be96e7d30f76f060&id=2625340&h=aad90c9f9e",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.galaxus.de/",
-                        "price": 189.00
-                    },
-                    {
-                        "websiteName": "Bei Amazon bestellen",
-                        "website": "/special/amazon/angebote/redirect?asin=B098BJYYFV",
-                        "icon": "",
-                        "price": 169.00
-                    }
-                ]
-            },
-            {
-                "productName": "Apple Series 7",
-                "productStore": [
-                    {
-                        "websiteName": "Mindfactory",
-                        "website": "https://winfuture-mobi.digidip.net/visit?url=https%3A%2F%2Fwinfuture.de%2Fpreisvergleich%2Fwfredirect%3Floc%3Dhttps%253A%252F%252Fgeizhals.at%252Fredir.cgi%253Fh%253Dmindfactory%2526loc%253Dhttps%25253A%25252F%25252Fwww.mindfactory.de%25252Fproduct_info.php%25252Finfo%25252Fp1429259%25252Fpid%25252Fgeizhals%2526ghaID%253D2617204%2526cs_id%253D137787954%2526key%253Df43e42baa1f5cf3c6fb1c79d134ade79%26id%3D2617204%26h%3D1abbd8fb75&currurl=https%3A%2F%2Fm.winfuture.de%2Fnews%2F129542",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.mindfactory.de/",
-                        "price": 419.92
-                    },
-                    {
-                        "websiteName": "X-kom",
-                        "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dxkom-de%26loc%3Dhttps%253A%252F%252Fwww.x-kom.de%252Fapple-watch-series-7-gps-45-mm-aluminiumgehaeuse-sportarmband-mitternacht-mkn53fd-a-smartwatch-ar65082%253Futm_source%253Dgeizhals%26ghaID%3D2617204%26cs_id%3D137787954%26key%3D588680e06b6a5ebb6a768bf082ad1eb9&id=2617204&h=f4369c43ea",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.x-kom.de/",
-                        "price": 419.95
-                    },
-                    {
-                        "websiteName": "Notebooksbilliger.de",
-                        "website": "https://winfuture.de/special/notebooksbilliger/redirect?hash=b4eb6625d26a5d3853257da0991685323fa655e8&url=https%3A%2F%2Fwww.notebooksbilliger.de%2Fapple%2Bwatch%2Bs7%2Baluminium%2B45mm%2Bmitternacht%2B739748%3Fnbbct%3D2003_adw&subid=",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.notebooksbilliger.de/",
-                        "price": 424.00
-                    },
-                    {
-                        "websiteName": "Bei Amazon bestellen",
-                        "website": "/special/amazon/angebote/redirect?asin=B098BJYYFV",
-                        "icon": "",
-                        "price": 419.99
-                    }
-                ]
-            },
-            {
-                "productName": "Galaxy Watch 4 Classic",
-                "productStore": [
-                    {
-                        "websiteName": "DasHandy_de Shop",
-                        "website": "https://winfuture-mobi.digidip.net/visit?url=https%3A%2F%2Fwinfuture.de%2Fpreisvergleich%2Fwfredirect%3Floc%3Dhttps%253A%252F%252Fgeizhals.at%252Fredir.cgi%253Fh%253Ddietechnik-de-28-eb-de%2526loc%253Dhttps%25253A%25252F%25252Febay.de%25252Fitm%25252F224877176330%25253Fvar%25253D0%252526mkevt%25253D1%252526mkcid%25253D1%252526toolid%25253D20006%252526mkrid%25253D707-53477-19255-0%252526campid%25253D5337412748%2526ghaID%253D2576522%2526cs_id%253D137787954%2526key%253Df1f0bdf958b3e4829a5c69f9b2c63f36%26id%3D2576522%26h%3D1d8270320a&currurl=https%3A%2F%2Fm.winfuture.de%2Fnews%2F129542",
-                        "icon": "https://i.wfcdn.de/favicons_proxy/?https://ebay.de/",
-                        "price": 205.00
-                    },
-                    {
-                        "websiteName": "Bei Amazon bestellen",
-                        "website": "/special/amazon/angebote/redirect?asin=B098BJYYFV",
-                        "icon": "",
-                        "price": 178.49
-                    }
-                ]
-            }
-        ]
-    }
+    "products": [
+        {
+            "productName" : "Galaxy Watch 4",
+            "productStore": [
+                {  
+                    "websiteName": "GSMshop.at",
+                    "website" : "https://www.GSmShop.de",
+                    "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.gsmshop.at/",
+                    "price": 160.90               
+                },
+                {  
+                    "websiteName": "Gomibo.de",
+                    "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dgomibo-de%26loc%3Dhttps%253A%252F%252Fwww.gomibo.de%252Fzubehoer-detail%252Fsamsung-galaxy-watch-4-44mm-schwarz%253Futm_source%253D4095%26ghaID%3D2576543%26cs_id%3D137787954%26key%3D713def46c29bd12b01d722f42d7c3b3e&id=2576543&h=34ec04c797",
+                    "icon" : "https://i.wfcdn.de/favicons_proxy/?https://www.gomibo.de/",
+                    "price": 166.95               
+                },
+                {  
+                    "websiteName": "Bei Amazon bestellen",
+                    "website" : "/special/amazon/angebote/redirect?asin=B098BJYYFV",
+                    "icon": "",
+                    "price": 186.56               
+                }
+            ]
+        },
+        {
+            "productName" : "Huawei Watch GT 3 Active",
+            "productStore": [
+                {  
+                    "websiteName": "Mindfactory",
+                    "website" : "https://winfuture-mobi.digidip.net/visit?url=https%3A%2F%2Fwinfuture.de%2Fpreisvergleich%2Fwfredirect%3Floc%3Dhttps%253A%252F%252Fgeizhals.at%252Fredir.cgi%253Fh%253Dmindfactory%2526loc%253Dhttps%25253A%25252F%25252Fwww.mindfactory.de%25252Fproduct_info.php%25252Finfo%25252Fp1434422%25252Fpid%25252Fgeizhals%2526ghaID%253D2625340%2526cs_id%253D137787954%2526key%253D72a65ee3c7c9862ef63196bd7767410d%26id%3D2625340%26h%3Dd94546ef41&currurl=https%3A%2F%2Fm.winfuture.de%2Fnews%2F129542",
+                    "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.mindfactory.de/",
+                    "price": 188.97               
+                },
+                {  
+                    "websiteName": "Galaxus",
+                    "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dgalaxus-de%26loc%3Dhttps%253A%252F%252Fwww.galaxus.de%252Fde%252Fproduct%252F18388945%253FpcscpId%253D29%2526utm_content%253D1-2w%2526utm_campaign%253Dpreisvergleich%2526utm_source%253Dgeizhals%2526utm_medium%253Dcpc%26ghaID%3D2625340%26cs_id%3D137787954%26key%3Ddc3d5a923a3b7028be96e7d30f76f060&id=2625340&h=aad90c9f9e",
+                    "icon" : "https://i.wfcdn.de/favicons_proxy/?https://www.galaxus.de/",
+                    "price": 189.00               
+                },
+                {  
+                    "websiteName": "Bei Amazon bestellen",
+                    "website" : "/special/amazon/angebote/redirect?asin=B098BJYYFV",
+                    "icon": "",
+                    "price": 169.00               
+                }
+            ]
+        },
+        {
+            "productName" : "Apple Series 7",
+            "productStore": [
+                {  
+                    "websiteName": "Mindfactory",
+                    "website" : "https://winfuture-mobi.digidip.net/visit?url=https%3A%2F%2Fwinfuture.de%2Fpreisvergleich%2Fwfredirect%3Floc%3Dhttps%253A%252F%252Fgeizhals.at%252Fredir.cgi%253Fh%253Dmindfactory%2526loc%253Dhttps%25253A%25252F%25252Fwww.mindfactory.de%25252Fproduct_info.php%25252Finfo%25252Fp1429259%25252Fpid%25252Fgeizhals%2526ghaID%253D2617204%2526cs_id%253D137787954%2526key%253Df43e42baa1f5cf3c6fb1c79d134ade79%26id%3D2617204%26h%3D1abbd8fb75&currurl=https%3A%2F%2Fm.winfuture.de%2Fnews%2F129542",
+                    "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.mindfactory.de/",
+                    "price": 419.92                   
+                },
+                {  
+                    "websiteName": "X-kom",
+                    "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dxkom-de%26loc%3Dhttps%253A%252F%252Fwww.x-kom.de%252Fapple-watch-series-7-gps-45-mm-aluminiumgehaeuse-sportarmband-mitternacht-mkn53fd-a-smartwatch-ar65082%253Futm_source%253Dgeizhals%26ghaID%3D2617204%26cs_id%3D137787954%26key%3D588680e06b6a5ebb6a768bf082ad1eb9&id=2617204&h=f4369c43ea",
+                    "icon" : "https://i.wfcdn.de/favicons_proxy/?https://www.x-kom.de/",
+                    "price": 419.95               
+                },
+                {  
+                    "websiteName": "Notebooksbilliger.de",
+                    "website": "https://winfuture.de/special/notebooksbilliger/redirect?hash=b4eb6625d26a5d3853257da0991685323fa655e8&url=https%3A%2F%2Fwww.notebooksbilliger.de%2Fapple%2Bwatch%2Bs7%2Baluminium%2B45mm%2Bmitternacht%2B739748%3Fnbbct%3D2003_adw&subid=",
+                    "icon" : "https://i.wfcdn.de/favicons_proxy/?https://www.notebooksbilliger.de/",
+                    "price": 424.00               
+                },
+                {  
+                    "websiteName": "Bei Amazon bestellen",
+                    "website" : "/special/amazon/angebote/redirect?asin=B098BJYYFV",
+                    "icon": "",
+                    "price": 419.99               
+                }
+            ]
+        },
+        {
+            "productName" : "Galaxy Watch 4 Classic",
+            "productStore": [
+                {  
+                    "websiteName": "DasHandy_de Shop",
+                    "website" : "https://winfuture-mobi.digidip.net/visit?url=https%3A%2F%2Fwinfuture.de%2Fpreisvergleich%2Fwfredirect%3Floc%3Dhttps%253A%252F%252Fgeizhals.at%252Fredir.cgi%253Fh%253Ddietechnik-de-28-eb-de%2526loc%253Dhttps%25253A%25252F%25252Febay.de%25252Fitm%25252F224877176330%25253Fvar%25253D0%252526mkevt%25253D1%252526mkcid%25253D1%252526toolid%25253D20006%252526mkrid%25253D707-53477-19255-0%252526campid%25253D5337412748%2526ghaID%253D2576522%2526cs_id%253D137787954%2526key%253Df1f0bdf958b3e4829a5c69f9b2c63f36%26id%3D2576522%26h%3D1d8270320a&currurl=https%3A%2F%2Fm.winfuture.de%2Fnews%2F129542",
+                    "icon": "https://i.wfcdn.de/favicons_proxy/?https://ebay.de/",
+                    "price": 205.00               
+                },
+                {  
+                    "websiteName": "Bei Amazon bestellen",
+                    "website" : "/special/amazon/angebote/redirect?asin=B098BJYYFV",
+                    "icon": "",
+                    "price": 178.49               
+                }
+            ]
+        }
+    ]
 }
