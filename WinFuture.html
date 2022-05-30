@@ -46,17 +46,16 @@
         color: white;
         text-shadow: 2px 1px black;
         box-shadow: 0px 0px 10px grey;
-        position: absolute;
-        z-index: 2;
+        position: relative;
+        z-index: 1;
       }
       .productName {
         color: #00438e;
         font-weight: bold;
         font-size: large;
         letter-spacing: 1px;
-        margin-left: 5px;
-        padding: 0;
         margin: 0;
+        padding: 0;
       }
       .productName::before {
         content: "";
@@ -73,17 +72,17 @@
         width: 0px;
         height: 0px;
         display: inline-block;
+        margin-right: 3px;
         border-top: 9px solid white;
         border-left: 4px solid #1d65b7;
         border-right: 4px solid black;
-        border-bottom: 1px solid #1d65b7;
+        border-bottom: 01px solid #1d65b7;
       }
       .icon {
         width: 29.5px;
         height: 29.5px;
         border-radius: 2px 2px 2px 2px;
         display: inline-flex;
-        border: 3px solid black;
         padding: 0;
         margin: 0;
       }
@@ -97,11 +96,11 @@
       }
       .amount {
         justify-content: right;
+        padding: 0;
+        margin: 0;
         align-items: center;
         font-weight: bold;
         display: flex;
-        padding: 0;
-        margin: 0;
         float: right;
         color: #00438e;
       }
@@ -140,14 +139,10 @@
     <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" >
 
   </amp-state>
-  
-    <amp-state id="name" [src]="items.items.filter(product => product.productName == 'Galaxy Watch 4')" >
-
-  </amp-state>
 
   <amp-list layout="fixed-height" height="227" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" binding="no">
     <template type="amp-mustache">
-      <div><ul><span class="product" on="tap:AMP.setState({ name: '{{productName}}' })"><h4 class="productName">{{productName}}</h4></ul></div>
+      <div><ul><span class="product"  on="tap:AMP.setState({ name: '{{productName}}' })"><h4 class="productName">{{productName}}</h4></ul></div>
     </template>
   </amp-list>
 
@@ -157,7 +152,7 @@
       <div class="footer">
     <ul id="productStore">
       {{#productStore}}
-        <li><span><img class="icon" src="{{icon}}" alt="icon"><a  class="store-name" href="{{website}}">{{websiteName}}</a><p class="amount">{{price}} €</p></span></li>
+        <li><span><amp-img width="25" height="25" src="{{icon}}" alt="icon"></amp-img><a  class="store-name" href="{{website}}">{{websiteName}}</a><p class="amount">{{price}} €</p></span></li>
       {{/productStore}}
       {{^productStore}}
       {{/productStore}}
@@ -165,6 +160,7 @@
     </div>
     </template>
   </amp-list>
+  <img src="{{icon}}" alt="icon">
   </div>
 
 </body></html>
