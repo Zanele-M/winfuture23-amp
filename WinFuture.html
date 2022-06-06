@@ -2,11 +2,13 @@
   ## Introduction
 
   The [`amp-list`](/content/amp-dev/documentation/components/reference/amp-list-v0.1.md) enables client-side rendering in AMP. Content can either be fetched from a JSON endpoint or locally from `amp-state`.
---><!-- -->
+-->
+<!-- -->
 <!doctype html>
 <html ⚡ lang="en">
+
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <title>amp-list</title>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <!-- ## Setup -->
@@ -18,148 +20,249 @@
   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-list/index.html">
   <meta name="viewport" content="width=device-width">
- <style amp-custom>
-      * {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+  <style amp-custom>
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .main {
+      background-color: #e8f2fc;
+      padding: 3px;
+      border-radius: 2%;
+      
+    }
+
+    .div {
+      background-color: #e8f2fc;
+      border-radius: 5px;
+      margin-left: 50px;
+      padding: 2px;
+      width: 550px;
+    }
+
+    .product {
+      background-color: #e8f2fc;
+      border: none;
+      border-bottom: 1px solid white;
+      padding: 15px;
+      position: relative;
+      display: inline-block;
+      color: white;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .product:hover {
+      border-radius: 7px;
+      border: 2px solid white;
+      box-shadow: 2px;
+      background-color: #1d65b7;
+      color: white;
+      text-shadow: 2px 1px black;
+      box-shadow: 0px 0px 10px grey;
+      position: relative;
+      z-index: 1;
+    }
+
+    .productName {
+      color: #00438e;
+      font-weight: bold;
+      font-size: large;
+      letter-spacing: 1px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .productName::before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      margin-right: 8px;
+      margin-bottom: 2px;
+      display: inline-block;
+      border-top: 4px solid #e8f2fc;
+      border-left: 9px solid #00438e;
+      border-bottom: 4px solid #e8f2fc;
+    }
+
+    .productName:hover::before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      color: white;
+      margin-right: 8px;
+      margin-bottom: 2px;
+      display: inline-block;
+      border-top: 4px solid #e8f2fc;
+      border-left: 9px solid #00438e;
+      border-bottom: 4px solid #e8f2fc;
+    }
+
+    .icon {
+      width: 29.5px;
+      height: 29.5px;
+      border-radius: 2px 2px 2px 2px;
+      display: inline-flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    .store-name {
+      display: inline-flex;
+      justify-content: left;
+      align-items: center;
+      margin-left: 10px;
+      color: #00438e;
+      text-decoration: none;
+    }
+
+    .amount {
+      justify-content: right;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      margin-right: 7px;
+      font-weight: bold;
+      display: flex;
+      float: right;
+      color: #00438e;
+    }
+
+    span {
+      display: inline-flex;
+    }
+
+    ul {
+      position: relative;
+      width: 550px;
+      display: grid;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      display: inline;
+      position: relative;
+      border-bottom: 1px solid lightgray;
+      height: 30px;
+    }
+
+    .footer {
+      color: rgb(150, 147, 147);
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+    }
+
+    li:last-child {
+      background-image: linear-gradient(to top left, goldenrod, rgb(252, 231, 115));
+    }
+  </style>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .div {
-        background-color: #e8f2fc;
-        border-radius: 5px;
-        margin-left: 50px;
-        padding: 2px;
-        width: 550px;
+
+      to {
+        visibility: visible
       }
-      .product {
-        background-color: #e8f2fc;
-        border: none;
-        border-bottom: 1px solid white;
-        padding: 15px;
-        position: relative;
-        justify-content: left;
-        align-items: center;
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .product:hover {
-        border-radius: 7px;
-        border: 2px solid white;
-        box-shadow: 2px;
-        background-color: #1d65b7;
-        color: white;
-        text-shadow: 2px 1px black;
-        box-shadow: 0px 0px 10px grey;
-        position: relative;
-        z-index: 1;
+
+      to {
+        visibility: visible
       }
-      .productName {
-        color: #00438e;
-        font-weight: bold;
-        font-size: large;
-        letter-spacing: 1px;
-        margin: 0;
-        padding: 0;
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .productName::before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        display: inline-block;
-        padding-right: 3px;
-        border-top: 4px solid #e8f2fc;
-        border-left: 9px solid #00438e;
-        border-bottom: 4px solid #e8f2fc;
+
+      to {
+        visibility: visible
       }
-      .productName:hover::before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        display: inline-block;
-        margin-right: 3px;
-        border-top: 9px solid white;
-        border-left: 4px solid #1d65b7;
-        border-right: 4px solid black;
-        border-bottom: 01px solid #1d65b7;
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .icon {
-        width: 29.5px;
-        height: 29.5px;
-        border-radius: 2px 2px 2px 2px;
-        display: inline-flex;
-        padding: 0;
-        margin: 0;
+
+      to {
+        visibility: visible
       }
-      .store-name {
-        display: inline-flex;
-        justify-content: left;
-        align-items: center;
-        margin-left: 10px;
-        color: #00438e;
-        text-decoration: none;
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .amount {
-        justify-content: right;
-        padding: 0;
-        margin: 0;
-        align-items: center;
-        font-weight: bold;
-        display: flex;
-        float: right;
-        color: #00438e;
+
+      to {
+        visibility: visible
       }
-      span {
-        width: 520px;
-        height: 25px;
-        display: flex;
+    }
+  </style><noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
       }
-      ul {
-        position: relative;
-        width: 550px;
-        display: grid;
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        list-style-type: none;
-        display: inline-flex;
-        position: relative;
-        border-bottom: 1px solid lightgray;
-        height: 30px;
-      }
-      .footer {
-        color: rgb(150, 147, 147);
-        justify-content: center;
-        align-items:center;
-        display: inline-flex;
-      }
-      li:last-child {
-        background-image: linear-gradient(to top left, goldenrod, rgb(252, 231, 115));
-      }
-      </style>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </style>
+  </noscript>
 </head>
+
 <body>
-    <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" >
+  <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"></amp-state>
 
-  </amp-state>
+  <div class="main">
+    <amp-list layout="fixed-height" height="227" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"
+      binding="no">
+      <template type="amp-mustache">
+        <div>
+          <ul><span class="product" on="tap:AMP.setState({ name: '{{productName}}' })">
+              <h4 class="productName">{{productName}}</h4>
+          </ul>
+        </div>
+      </template>
+    </amp-list>
 
-  <amp-list layout="fixed-height" height="227" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" binding="no">
-    <template type="amp-mustache">
-      <div><ul><span class="product"  on="tap:AMP.setState({ name: '{{productName}}' })"><h4 class="productName">{{productName}}</h4></ul></div>
-    </template>
-  </amp-list>
-
-  <div class="stores">
-  <amp-list layout="fixed-height" height="300"  [src]="items.items.filter(product => product.productName == name)">
-    <template type="amp-mustache">
-      <div class="footer">
-    <ul id="productStore">
-      {{#productStore}}
-        <li><span><amp-img width="25" height="25" src="{{icon}}" alt="icon"></amp-img><a  class="store-name" href="{{website}}">{{websiteName}}</a><p class="amount">{{price}} €</p></span></li>
-      {{/productStore}}
-      {{^productStore}}
-      {{/productStore}}
-    </ul>   
+    <div class="stores">
+      <amp-list layout="fixed-height" [src]="items.items.filter(product => product.productName == name)">
+        <template type="amp-mustache">
+          <div class="footer">
+            <ul id="productStore">
+              {{#productStore}}
+              <li style="border: 2px solid black;">
+                <amp-img width="25" height="25" src="{{icon}}" alt="icon"></amp-img><a class="store-name"
+                  href="{{website}}">{{websiteName}}</a>
+                <p class="amount">{{price}} €</p>
+              </li>
+              {{/productStore}}
+              {{^productStore}}
+              {{/productStore}}
+            </ul>
+          </div>
+        </template>
+      </amp-list>
     </div>
-    </template>
-  </amp-list>
   </div>
+</body>
 
-</body></html>
+</html>
