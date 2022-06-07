@@ -23,6 +23,8 @@
   <style amp-custom>
     * {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-decoration: none;
+      color: #00438e;
       hyphens: auto;
     }
 
@@ -30,12 +32,6 @@
       color: #000;
       font-size: 15px;
       line-height: 1.6;
-    }
-
-    .teaser a,
-    .text a {
-      color: #00438e;
-      text-decoration: underline;
     }
 
     .title {
@@ -72,6 +68,23 @@
       border-bottom: 1px solid #fff;
       cursor: pointer;
       font-weight: 700;
+      font-size: 12px;
+    }
+
+    .tab_active {
+      background: #2578bb;
+      padding: 5px;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .tab_active::before {
+      content: '\25BE ';
     }
 
     .active {
@@ -86,8 +99,6 @@
     .tab_contents {
       padding: 5px;
     }
-
-    span {}
 
     span::before {
       content: '\25B8 ';
@@ -123,6 +134,10 @@
       font-weight: 700;
     }
 
+    .price::before {
+      content: "";
+    }
+
     .table {
       display: table;
     }
@@ -133,21 +148,28 @@
     }
 
     .amazon_bar {
-  display: inline-block;
-  height: 25px;
-  position: relative;
-  background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) 0 -50px repeat-x;
-  margin: 3px 0 0;
-  padding: 0 5px 0 25px;
-  font-size: 13px;
-  width: 270px;
-}
+      display: inline-block;
+      height: 25px;
+      position: relative;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) 0 -50px repeat-x;
+      margin: 3px 0 0;
+      padding: 0 5px 0 25px;
+      font-size: 13px;
+      width: 270px;
+    }
 
- .info {
-  margin-top: 3px;
-  color: #999;
-  font-size: 10px;
-}
+    .amazon_bar em {
+      display: block;
+      width: 25px;
+      left: 0;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) no-repeat;
+    }
+
+    .info {
+      margin-top: 3px;
+      color: #999;
+      font-size: 10px;
+    }
   </style>
   <style amp-boilerplate>
     body {
@@ -226,18 +248,16 @@
     <div class="p_widget mt0 nointelliTXT">
       <div class="widget_tabs">
         <div class="tabs">
-          <amp-list layout="fixed-height" height="180"
+          <amp-list layout="fixed-height" height="145"
             src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" binding="no">
             <template type="amp-mustache">
-              <div class="tab">
-                <span on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</span>
-              </div>
+              <div class="tab" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}} </div>
             </template>
           </amp-list>
         </div>
 
         <div class="tab_contents">
-          <amp-list layout="fixed-height" height="25"
+          <amp-list layout="fixed-height" height="78"
             [src]="items.items.filter(product => product.productName == name)">
             <template type="amp-mustache">
               <div class="table">
