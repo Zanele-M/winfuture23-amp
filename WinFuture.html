@@ -1,9 +1,3 @@
-<!--
-  ## Introduction
-
-  The [`amp-list`](/content/amp-dev/documentation/components/reference/amp-list-v0.1.md) enables client-side rendering in AMP. Content can either be fetched from a JSON endpoint or locally from `amp-state`.
--->
-<!-- -->
 <!doctype html>
 <html ⚡ lang="en">
 
@@ -48,7 +42,7 @@
     }
 
     .mt0 {
-      margin-top: 0 !important;
+      margin-top: 0;
     }
 
     .widget_tabs {
@@ -240,7 +234,6 @@
     </style>
   </noscript>
 </head>
-
 <body>
   <div class="p_widget nointelliTXT">
     <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"></amp-state>
@@ -248,28 +241,27 @@
     <div class="p_widget mt0 nointelliTXT">
       <div class="widget_tabs">
         <div class="tabs">
-          <amp-list layout="fixed-height" height="145"
-            src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" binding="no">
+          <amp-list layout="fixed-height" height="145" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
             <template type="amp-mustache">
-              <div class="tab" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}} </div>
+              <div class="tab" role="button" tabindex="0" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</div>
             </template>
           </amp-list>
         </div>
 
         <div class="tab_contents">
-          <amp-list layout="fixed-height" height="78"
-            [src]="items.items.filter(product => product.productName == name)">
+          <amp-list layout="fixed-height" height="85" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/first_ptoduct.json" [src]="items.items.filter(product => product.productName == name)" [is-layout-container]="true"
+                  binding="no">
             <template type="amp-mustache">
               <div class="table">
                 <div class="cell">
                   {{#productStore}}
-                  <a href="{{website}}" target="_blank" rel="nofollow noopener" class="shop">
-                    <span>
-                      <amp-img class="favicon" width="16" height="16" src="{{icon}}" alt="icon"></amp-img>
-                      {{websiteName}}
-                    </span>
-                    <span class="price">{{price}} €</span>
-                  </a>
+                    <a href="{{website}}" target="_blank" rel="nofollow noopener" class="shop">
+                      <span>
+                        <amp-img class="favicon" width="16" height="16" src="{{icon}}" alt="icon"></amp-img>
+                        {{websiteName}}
+                      </span>
+                      <span class="price">{{price}} €</span>
+                    </a>
                   {{/productStore}}
                   {{^productStore}}
                   {{/productStore}}
@@ -283,5 +275,4 @@
     </div>
   </div>
 </body>
-
 </html>
