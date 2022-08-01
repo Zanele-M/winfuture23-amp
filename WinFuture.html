@@ -57,19 +57,26 @@
     }
 
     .tab {
-      color: #00438e;
-      padding: 8px;
+      color: hsl(212, 100%, 28%);
+      background-color: #e8f2fc;
+      padding: 10px;
+      border: none;
       border-bottom: 1px solid #fff;
       cursor: pointer;
       font-weight: 700;
       font-size: 12px;
+      width: 310px;
+      text-align: left;
     }
 
-    .tab_active {
+    .tab:focus {
       background: #2578bb;
-      padding: 5px;
+      width: 310px;
+      padding: 10px;
+      margin-bottom: 2px;
       color: #fff;
       text-shadow: 1px 1px 0 #000;
+      text-align: left;
       border: 1px solid #fff;
       border-radius: 5px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
@@ -94,12 +101,13 @@
       padding: 5px;
     }
 
-    span::before {
+   .tab::before {
       content: '\25B8 ';
     }
 
     .favicon {
-      position: absolute;
+      position: relative;
+      display: inline-block;
       top: 2px;
       left: 0;
     }
@@ -143,11 +151,11 @@
 
     .amazon_bar {
       display: inline-block;
-      height: 25px;
       position: relative;
+      height: 25px;
       background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) 0 -50px repeat-x;
       margin: 3px 0 0;
-      padding: 0 5px 0 25px;
+      padding: 3px 5px;
       font-size: 13px;
       width: 270px;
     }
@@ -158,6 +166,27 @@
       left: 0;
       background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) no-repeat;
     }
+
+    a {
+      padding: 0 5px 0 25px;
+    }
+
+    a:last-child {
+      display: inline-block;
+      height: 18px;
+      position: relative;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) 0 -50px repeat-x;
+      padding: 3px 2px 3px 3px;
+      font-size: 13px;
+      width: 295px;
+    }
+
+    a:last-child.favicon {
+      display: block;
+      width: 25px;
+      left: 0;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) no-repeat;
+      }
 
     .info {
       margin-top: 3px;
@@ -222,6 +251,10 @@
         visibility: visible
       }
     }
+
+    .i-amphtml-ghost{
+      visibility: visible !important;
+    }
   </style>
   <noscript>
     <style amp-boilerplate>
@@ -237,13 +270,13 @@
 <body>
   <div class="p_widget nointelliTXT">
     <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"></amp-state>
-    <div class="title mb10">Beliebte Smartwatches im Preisvergleich:</div>
+    <div class="title">Beliebte Smartwatches im Preisvergleich:</div>
     <div class="p_widget mt0 nointelliTXT">
       <div class="widget_tabs">
         <div class="tabs">
-          <amp-list layout="fixed-height" height="145" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
+          <amp-list layout="fixed-height" height="149" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
             <template type="amp-mustache">
-              <div class="tab" role="button" tabindex="0" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</div>
+                <button class="tab" role="button" tabindex="0" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</button>
             </template>
           </amp-list>
         </div>
@@ -256,10 +289,8 @@
                 <div class="cell">
                   {{#productStore}}
                     <a href="{{website}}" target="_blank" rel="nofollow noopener" class="shop">
-                      <span>
                         <amp-img class="favicon" width="16" height="16" src="{{icon}}" alt="icon"></amp-img>
                         {{websiteName}}
-                      </span>
                       <span class="price">{{price}} €</span>
                     </a>
                   {{/productStore}}
