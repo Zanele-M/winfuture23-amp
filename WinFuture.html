@@ -1,141 +1,309 @@
 <!doctype html>
 <html ⚡ lang="en">
+
 <head>
-    <title>Prices-Widgets</title>
-    <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <link rel="canonical" href="https://zanele-m.github.io/winfuture23-amp/WinFuture.html">
-    <meta name="viewport" content="width=device-width">
-        <!-- ## Setup -->
-    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-    <style amp-custom>
-      * {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+  <meta charset="utf-8">
+  <title>amp-list</title>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!-- ## Setup -->
+  <!-- Import the `amp-list` component ... -->
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <!-- ... and the `amp-mustache` component in the header. -->
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <!-- Import the `amp-bind` component for dynamically changing the content of an `amp-list`. -->
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-list/index.html">
+  <meta name="viewport" content="width=device-width">
+  <style amp-custom>
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-decoration: none;
+      color: #00438e;
+      hyphens: auto;
+    }
+
+    div {
+      color: #000;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .mb10 {
+      margin-bottom: 10px;
+    }
+
+    .p_widget {
+      margin: 20px 0;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .widget_tabs {
+      width: 310px;
+      border: 2px solid #e8f2fc;
+      border-radius: 5px;
+    }
+
+    .tabs {
+      background: #e8f2fc;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .tab {
+      color: hsl(212, 100%, 28%);
+      background-color: #e8f2fc;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 12px;
+      width: 310px;
+      text-align: left;
+    }
+
+    .tab:focus {
+      background: #2578bb;
+      width: 310px;
+      padding: 10px;
+      margin-bottom: 2px;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+      text-align: left;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .tab:focus:before {
+      content: '\25BE ';
+    }
+
+    .active {
+      background: #2578bb;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, .6);
+    }
+
+    .tab_contents {
+      padding: 5px;
+    }
+
+   .tab::before {
+      content: '\25B8 ';
+    }
+
+    .favicon {
+      position: relative;
+      display: inline-block;
+      top: 2px;
+      left: 0;
+    }
+
+    .shop {
+      display: block;
+      padding: 3px 5px;
+      border-bottom: 1px solid #ddd;
+      width: 290px;
+      position: relative;
+      top: 0;
+      left: 0;
+      font-size: 13px;
+    }
+
+    .price {
+      width: 90px;
+      padding: 0;
+      text-align: right;
+      position: absolute;
+      top: 3px;
+      left: auto;
+      right: 5px;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+
+    .price::before {
+      content: "";
+    }
+
+    .table {
+      display: table;
+    }
+
+    .cell {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .amazon_bar {
+      display: inline-block;
+      position: relative;
+      height: 25px;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) 0 -50px repeat-x;
+      margin: 3px 0 0;
+      padding: 3px 5px;
+      font-size: 13px;
+      width: 270px;
+    }
+
+    .amazon_bar em {
+      display: block;
+      width: 25px;
+      left: 0;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) no-repeat;
+    }
+
+    a {
+      padding: 0 5px 0 25px;
+    }
+
+    a:last-child {
+      display: inline-block;
+      height: 18px;
+      position: relative;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) 0 -50px repeat-x;
+      padding: 3px 2px 3px 3px;
+      font-size: 13px;
+      width: 295px;
+    }
+
+    a:last-child.favicon {
+      display: block;
+      width: 25px;
+      left: 0;
+      background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) no-repeat;
       }
-      div {
-        background-color: #e8f2fc;
-        border-radius: 5px;
-        width: 520px;
-        margin-left: 50px;
-        padding: 2px;
+
+    .info {
+      margin-top: 3px;
+      color: #999;
+      font-size: 10px;
+    }
+  </style>
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .i-amphtml-accordion-header {
-        appearance: inherit;
-        margin-bottom: 3px;
-        background-color: #e8f2fc;
-        border: none;
-        border-bottom: 1px solid white;
-        padding: 15px;
-        position: relative;
+
+      to {
+        visibility: visible
       }
-      .i-amphtml-accordion-header:hover {
-        border-radius: 7px;
-        border: 2px solid white;
-        box-shadow: 2px;
-        background-color: #1d65b7;
-        color: white;
-        text-shadow: 2px 1px black;
-        box-shadow: 0px 0px 10px grey;
-        position: absolute;
-        z-index: 2;
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      h4 {
-        color: #00438e;
-        font-weight: bold;
-        font-size: large;
-        letter-spacing: 1px;
+
+      to {
+        visibility: visible
       }
-      h4::before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        display: inline-block;
-        border-top: 4px solid #e8f2fc;
-        border-left: 9px solid #00438e;
-        border-bottom: 4px solid #e8f2fc;
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      h4:hover::before {
-        content: "";
-        width: 0px;
-        height: 0px;
-        display: inline-block;
-        border-top: 9px solid white;
-        border-left: 4px solid #1d65b7;
-        border-right: 4px solid black;
-        border-bottom: 1px solid #1d65b7;
+
+      to {
+        visibility: visible
       }
-      img {
-        width: 29.5px;
-        height: 29.5px;
-        border-radius: 2px 2px 2px 2px;
-        display: inline-flex;
-        padding: 0;
-        margin: 0;
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      .store-name {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
-        color: #00438e;
+
+      to {
+        visibility: visible
       }
-      .amount {
-        justify-content: center;
-        float: right;
-        align-items: center;
-        font-weight: bold;
-        display: flex;
-        float: right;
-        color: #00438e;
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
       }
-      span {
-        width: 520px;
-        height: 25px;
-        display: flex;
+
+      to {
+        visibility: visible
       }
-      ul {
-        height: 25px;
-        position: absolute;
-        display: grid;
-        margin: 0;
-        padding: 0;
+    }
+
+    .i-amphtml-ghost{
+      visibility: visible !important;
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
       }
-      li {
-        list-style-type: none;
-        display: inline-flex;
-        position: relative;
-        border-bottom: 1px solid lightgray;
-        height: 30px;
-      }
-      .footer {
-        color: rgb(150, 147, 147);
-        justify-content: center;
-        align-items:center;
-        display: inline-flex;
-      }
-      li:last-child {
-        background-image: linear-gradient(to top left, goldenrod, rgb(252, 231, 115));
-      }
-      </style>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </style>
+  </noscript>
 </head>
 <body>
-  <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json">
-  </amp-state>
-    <amp-list layout="fixed-height" height="100" [src]="items.products.filter(product => product.productName == 'Galaxy Watch 4')"  binding="no">
-      <template type="amp-mustache">
-        <div><button on="tap:AMP.setState({ productName: items.productName })">{{productName}}</button></div>
-      </template>
-    </amp-list>
-  
-  <div class="stores">
-    <amp-list layout="fixed-height" height="100" [src]="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" binding="no">
-      <template type="amp-mustache">
-    <li><span><img src="assets/amazon.png" alt="amazon icon"><p class="store-name">{{productStore}}</p><p class="amount">62,99€</p></span></li>
-  </template>
-</amp-list>
+  <div class="p_widget nointelliTXT">
+    <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"></amp-state>
+    <div class="title">Beliebte Smartwatches im Preisvergleich:</div>
+    <div class="p_widget mt0 nointelliTXT">
+      <div class="widget_tabs">
+        <div class="tabs">
+          <amp-list layout="fixed-height" height="149" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
+            <template type="amp-mustache">
+                <button class="tab" role="button" tabindex="0" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</button>
+            </template>
+          </amp-list>
+        </div>
+
+        <div class="tab_contents">
+          <amp-list layout="fixed-height" height="85" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/first_ptoduct.json" [src]="items.items.filter(product => product.productName == name)" [is-layout-container]="true"
+                  binding="no">
+            <template type="amp-mustache">
+              <div class="table">
+                <div class="cell">
+                  {{#productStore}}
+                    <a href="{{website}}" target="_blank" rel="nofollow noopener" class="shop">
+                        <amp-img class="favicon" width="16" height="16" src="{{icon}}" alt="icon"></amp-img>
+                        {{websiteName}}
+                      <span class="price">{{price}} €</span>
+                    </a>
+                  {{/productStore}}
+                  {{^productStore}}
+                  {{/productStore}}
+                </div>
+              </div>
+            </template>
+          </amp-list>
+          <div class="info">Preise vom 04.06.22 12:34 Uhr, können jetzt anders sein.</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
