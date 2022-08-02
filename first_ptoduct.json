@@ -1,0 +1,27 @@
+{
+    "items" : [
+        {
+        "productName": "Galaxy series 4",
+        "productStore": [
+            {
+                "websiteName": "GSMshop.at",
+                "website": "https://www.GSmShop.de",
+                "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.gsmshop.at/",
+                "price": "160,90"
+            },
+            {
+                "websiteName": "Gomibo.de",
+                "website": "https://winfuture.de/preisvergleich/wfredirect?loc=https%3A%2F%2Fgeizhals.at%2Fredir.cgi%3Fh%3Dgomibo-de%26loc%3Dhttps%253A%252F%252Fwww.gomibo.de%252Fzubehoer-detail%252Fsamsung-galaxy-watch-4-44mm-schwarz%253Futm_source%253D4095%26ghaID%3D2576543%26cs_id%3D137787954%26key%3D713def46c29bd12b01d722f42d7c3b3e&id=2576543&h=34ec04c797",
+                "icon": "https://i.wfcdn.de/favicons_proxy/?https://www.gomibo.de/",
+                "price": "166,95"
+            },
+            {
+                "websiteName": "Bei Amazon bestellen",
+                "website": "/special/amazon/angebote/redirect?asin=B098BJYYFV",
+                "icon": "//i.wfcdn.de/5/amazon_bar_sprite_2.png",
+                "price": "186,56"
+            }
+        ]
+    }
+    ]
+    }
