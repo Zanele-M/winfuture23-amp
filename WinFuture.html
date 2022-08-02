@@ -108,7 +108,6 @@
     .favicon {
       position: relative;
       display: inline-block;
-      top: 2px;
       left: 0;
     }
 
@@ -185,6 +184,7 @@
       display: block;
       width: 25px;
       left: 0;
+      padding-right: 5px;
       background: url(//i.wfcdn.de/5/amazon_bar_sprite_2.png) no-repeat;
       }
 
@@ -267,14 +267,14 @@
     </style>
   </noscript>
 </head>
-<body>
+<body ontouchstart="">
   <div class="p_widget nointelliTXT">
     <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"></amp-state>
     <div class="title">Beliebte Smartwatches im Preisvergleich:</div>
     <div class="p_widget mt0 nointelliTXT">
       <div class="widget_tabs">
         <div class="tabs">
-          <amp-list layout="fixed-height" height="149" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
+          <amp-list layout="fixed-height" height="147" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
             <template type="amp-mustache">
                 <button class="tab" role="button" tabindex="0" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</button>
             </template>
