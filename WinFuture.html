@@ -267,7 +267,7 @@
     </style>
   </noscript>
 </head>
-<body ontouchstart="">
+<body>
   <div class="p_widget nointelliTXT">
     <amp-state id="items" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json"></amp-state>
     <div class="title">Beliebte Smartwatches im Preisvergleich:</div>
@@ -276,7 +276,7 @@
         <div class="tabs">
           <amp-list layout="fixed-height" height="147" src="https://winfuture-amp.s3.eu-west-2.amazonaws.com/products.json" [is-layout-container]="true" binding="no">
             <template type="amp-mustache">
-                <button class="tab" role="button" tabindex="0" on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</button>
+                <button class="tab" role="button" tabindex="0" ontouchstart on="tap:AMP.setState({ name: '{{productName}}' })">{{productName}}</button>
             </template>
           </amp-list>
         </div>
